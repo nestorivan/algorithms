@@ -19,4 +19,4 @@ const adjacencyList = new AdjancencyList(airports);
 
 routes.forEach(route => adjacencyList.addEdge(...route))
 
-console.log(adjacencyList.getList())
+console.log(adjacencyList.dfs('PHX','BKK'))
