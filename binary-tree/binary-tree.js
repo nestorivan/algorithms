@@ -86,7 +86,6 @@ class BinaryTree{
 
     if(node.left)
       this.findValue(target, node.left, visited)
-    
 
     if(node.right)
       this.findValue(target, node.right, visited)
