@@ -75,6 +75,24 @@ class BinaryTree{
     this.printNode(this.root)
   }
 
+  findValue(target, node = null, visited = new Set()){
+    node = !node ? this.root : node;
+
+    if(node.data === target){
+      console.log(`${target} has been found!`);
+    }
+
+    visited.add(node.data)
+
+    if(node.left)
+      this.findValue(target, node.left, visited)
+    
+
+    if(node.right)
+      this.findValue(target, node.right, visited)
+
+    return `${target} was not found`
+  }
 }
 
 module.exports = BinaryTree
