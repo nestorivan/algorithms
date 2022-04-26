@@ -12,7 +12,7 @@ class Node {
 class BinaryTree{
   root = null;
 
-  findInsertPoint(node, data){
+  findInsertionPoint(node, data){
     // if data value is less than our current node value 
     //we check if left is empty and insert data
     if(data < node.data && !node.left){
@@ -23,7 +23,7 @@ class BinaryTree{
     // if data value is less than our current node value
     // and our left node has value , we set node.left as our new current node
     if(data < node.data && node.left){
-      return this.findInsertPoint(node.left, data)
+      return this.findInsertionPoint(node.left, data)
     }
 
     // if data value is more than our current node value
@@ -36,7 +36,7 @@ class BinaryTree{
     // if data value is more than our current node value
     // and our right node has value, we set node.right as our new current node
     if(data > node.data && node.right){
-      return this.findInsertPoint(node.right, data)
+      return this.findInsertionPoint(node.right, data)
     }
 
     // if data is not greater than node.value
@@ -53,7 +53,7 @@ class BinaryTree{
       return;
     }
 
-    this.findInsertPoint(root, data)
+    this.findInsertionPoint(root, data)
   }
 
   printNode(node){
