@@ -80,6 +80,7 @@ class BinaryTree{
 
     if(node.data === target){
       console.log(`${target} has been found!`);
+      return;
     }
 
     visited.add(node.data)
